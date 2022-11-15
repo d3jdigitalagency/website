@@ -39,9 +39,9 @@ const Home: NextPage = () => {
             height="115"
             alt="D3J Digital Limited"
           />
-          <h1 className="text-5xl leading-relaxed">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl leading-relaxed">
             Unlimited Web Development
-            <span className="ml-3 lg:ml-0 md:block">
+            <span className="ml-3 lg:ml-0 sm:block">
               at a fixed monthly price.
             </span>
           </h1>

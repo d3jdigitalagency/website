@@ -288,11 +288,6 @@ const Home: NextPage = () => {
                   have unlimited requests, meaning we can complete any number of
                   jobs in a month, depending on their complexity.
                 </p>
-                <p>
-                  Our pricing model is simple: you pay a flat monthly fee and
-                  can have unlimited requests. This means we can complete any
-                  number jobs in a month, depending on their complexity.
-                </p>
               </Accordion>
               <Accordion title="Would it be better to hire a full-time developer?">
                 <p>

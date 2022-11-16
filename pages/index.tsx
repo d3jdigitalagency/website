@@ -70,42 +70,37 @@ const Home: NextPage = () => {
           <p className="mx-8">AWS</p>
           <p className="mx-8">Digital Ocean</p>
         </Marquee>
-        <PageSection
-          className="bg-gray-50"
-          id="benefits"
-          title="Benefits"
-          subtitle="The perfect partner for your business"
-        >
+        <PageSection className="bg-gray-50" id="benefits" title="Benefits">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16">
             <Benefit
               icon={<CheckBadgeIcon className="w-10 h-10 mx-auto" />}
               title="Private Job Board"
-              description="Easily keep track of requests, progress & communication."
+              description="Easily keep track of requests, progress, and communication via a private Trello board."
             />
             <Benefit
               icon={<CurrencyPoundIcon className="w-10 h-10 mx-auto" />}
               title="Fixed Monthly Price"
-              description="No hidden suprises! Always the same price each month."
+              description="No quotes, no invoices, no hidden surprises. Just the same price each month."
             />
             <Benefit
               icon={<ChevronDoubleDownIcon className="w-10 h-10 mx-auto" />}
               title="Keep Overheads Low"
-              description="Cheaper than a full-time employee or agency."
+              description="Cheaper than a full-time employee and agency, with some amazing tax incentives."
             />
             <Benefit
               icon={<UserCircleIcon className="w-10 h-10 mx-auto" />}
               title="Dedicated Developer"
-              description="There to work with you every step of the way."
+              description="Your on-hand industry expert is there to work with you every step of the way."
             />
             <Benefit
               icon={<ChartBarSquareIcon className="w-10 h-10 mx-auto" />}
               title="Unlimited Requests"
-              description="The sky's the limit. Add new requests at any time."
+              description="Got an issue with your site or want a new feature building? It's all included."
             />
             <Benefit
               icon={<XCircleIcon className="w-10 h-10 mx-auto" />}
               title="Cancel Anytime"
-              description="No contracts or commitments. Only pay when you need us."
+              description="No contract. No minimum term. Only pay when you need us and cancel anytime."
             />
           </div>
         </PageSection>
@@ -116,12 +111,12 @@ const Home: NextPage = () => {
                 src="/assets/images/step-1.svg"
                 width="200"
                 height="115"
-                alt="D3J Digital Limited"
+                alt="Step 1"
               />
               <p className="text-xl mt-6 mb-4 font-bold">Choose a plan</p>
               <p className="md:w-1/2 md:mx-auto">
-                Take a look at our plans below and choose the right one for you.
-                The longer you commit, the more you could save.
+                Have a look at our plans below and choose the right one for you.
+                The longer you commit, the more you save.
               </p>
             </div>
             <div className="col-span-1 gap-4 mx-auto text-center">
@@ -129,13 +124,13 @@ const Home: NextPage = () => {
                 src="/assets/images/step-2.svg"
                 width="200"
                 height="115"
-                alt="D3J Digital Limited"
+                alt="Step 2"
               />
               <p className="text-xl mt-6 mb-4 font-bold">
-                Welcome to your job board
+                Access your job board
               </p>
               <p className="md:w-1/2 md:mx-auto">
-                Get invited to your private job board where you can add
+                Get invited to your private job board, where you can add
                 requests, ask questions, and keep track of progress.
               </p>
             </div>
@@ -144,12 +139,12 @@ const Home: NextPage = () => {
                 src="/assets/images/step-3.svg"
                 width="200"
                 height="115"
-                alt="D3J Digital Limited"
+                alt="Step 3"
               />
               <p className="text-xl mt-6 mb-4 font-bold">Sit back and relax</p>
               <p className="md:w-1/2 md:mx-auto">
-                We will work through your requests one by one so you can sit
-                back and relax knowing everything is taken care of.
+                We will begin to work through your requests so you can sit back
+                and relax, knowing everything is taken care of.
               </p>
             </div>
           </div>
@@ -157,8 +152,8 @@ const Home: NextPage = () => {
         <PageSection
           className="bg-black text-white"
           id="example"
-          title="Want to see an example project?"
-          subtitle="Get an idea of how we manage our projects"
+          title="Have a look at an example job board"
+          subtitle="Get an idea of how we manage our clients"
         >
           <div className="w-auto m-auto">
             <Button
@@ -170,11 +165,7 @@ const Home: NextPage = () => {
             />
           </div>
         </PageSection>
-        <PageSection
-          id="plans"
-          title="Plans"
-          subtitle="Choose a plan that's right for you"
-        >
+        <PageSection id="plans" title="Plans">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="grid-cols-1">
               <Plan

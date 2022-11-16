@@ -49,27 +49,33 @@ const Home: NextPage = () => {
             label="See Plans"
             onClick={() => (window.location.href = '#plans')}
           />
+          <ChevronDoubleDownIcon
+            className="w-10 h-10 mx-auto animate-bounce cursor-pointer"
+            onClick={() => (window.location.href = '#technologies')}
+          />
         </PageSection>
-        <Marquee
-          className="p-8 bg-yellow text-black font-primary text-2xl"
-          speed={50}
-          gradient={false}
-        >
-          <p className="mx-8">Webflow</p>
-          <p className="mx-8">WordPress</p>
-          <p className="mx-8">Elementor</p>
-          <p className="mx-8">WooCommerce</p>
-          <p className="mx-8">Magento</p>
-          <p className="mx-8">Shopify</p>
-          <p className="mx-8">Laravel</p>
-          <p className="mx-8">Zend Framework</p>
-          <p className="mx-8">React</p>
-          <p className="mx-8">Vue</p>
-          <p className="mx-8">Cordova</p>
-          <p className="mx-8">Google Cloud</p>
-          <p className="mx-8">AWS</p>
-          <p className="mx-8">Digital Ocean</p>
-        </Marquee>
+        <div id="technologies">
+          <Marquee
+            className="p-8 bg-yellow text-black font-primary text-2xl"
+            speed={50}
+            gradient={false}
+          >
+            <p className="mx-8">Webflow</p>
+            <p className="mx-8">WordPress</p>
+            <p className="mx-8">Elementor</p>
+            <p className="mx-8">WooCommerce</p>
+            <p className="mx-8">Magento</p>
+            <p className="mx-8">Shopify</p>
+            <p className="mx-8">Laravel</p>
+            <p className="mx-8">Zend Framework</p>
+            <p className="mx-8">React</p>
+            <p className="mx-8">Vue</p>
+            <p className="mx-8">Cordova</p>
+            <p className="mx-8">Google Cloud</p>
+            <p className="mx-8">AWS</p>
+            <p className="mx-8">Digital Ocean</p>
+          </Marquee>
+        </div>
         <PageSection className="bg-gray-50" id="benefits" title="Benefits">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16">
             <Benefit

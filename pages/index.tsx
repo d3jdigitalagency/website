@@ -24,7 +24,7 @@ const Home: NextPage = () => {
         <title>Web Development as a Subscription | D3J Digital</title>
         <meta
           name="description"
-          content="Save thousands on recruitment, agency and contractor fees. Get unlimited web development services for one fixed monthly price. No contract. Cancel anytime."
+          content="Unlimited web development services for one fixed monthly price. Save thousands on recruitment, agency and contractor fees. No contract. Cancel anytime."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -232,12 +232,7 @@ const Home: NextPage = () => {
         <PageSection id="faqs" title="FAQs">
           <div className="md:w-2/3 lg:w-1/2 md:mx-auto">
             <AccordionGroup>
-              <Accordion title="Do I need a website / system already?">
-                <p>
-                  Yes! We are currently taking requests from those who already
-                  have a website or system. Due to our current capacity, your
-                  website or system must be built in one of the following.
-                </p>
+              <Accordion title="Which technologies, frameworks, and languages do you support?">
                 <p>
                   <span className="font-bold">CMS:</span> Webflow, WordPress,
                   Elementor
@@ -251,8 +246,8 @@ const Home: NextPage = () => {
                   Zend
                 </p>
                 <p>
-                  <span className="font-bold">JS Libraries:</span> React,
-                  Next.js, Vue, Nuxt.js
+                  <span className="font-bold">Javascript Libraries:</span>{' '}
+                  React, Next.js, Vue, Nuxt.js
                 </p>
               </Accordion>
               <Accordion title="How do requests work?">
@@ -308,16 +303,17 @@ const Home: NextPage = () => {
                   rectify any issues as soon as possible.
                 </p>
               </Accordion>
+              <Accordion title="How are payments handled?">
+                <p>We use Stripe to manage payments and subscriptions.</p>
+                <p>
+                  We do not store or process any of your personal details on our
+                  servers.
+                </p>
+              </Accordion>
               <Accordion title="Do you offer any refunds?">
                 <p>
                   Unfortunately, due to the nature of the work, we do not offer
                   any refunds.
-                </p>
-              </Accordion>
-              <Accordion title="How are payments handled?">
-                <p>
-                  We use Stripe to manage payments and subscriptions. We do not
-                  store or process any of your personal details on our servers.
                 </p>
               </Accordion>
             </AccordionGroup>

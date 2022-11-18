@@ -22,9 +22,11 @@ const Accordion = ({ ...props }: IAccordion) => {
           <ChevronDownIcon className="w-6 h-6" />
         )}
       </div>
-      {opened ? (
-        <div className="flex flex-col gap-4 pb-4">{props.children}</div>
-      ) : null}
+      <div
+        className={`flex flex-col gap-4 pb-4 ${!opened ? 'hidden' : 'block'}`}
+      >
+        {props.children}
+      </div>
     </div>
   );
 };

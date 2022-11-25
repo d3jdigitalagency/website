@@ -28,7 +28,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="font-body">
-        <header className="bg-black text-white">
+        <header className="hidden lg:block bg-black text-white">
           <div className="flex justify-center md:justify-between items-center container font-bold">
             <Image
               src="/assets/logos/logo-white.svg"
@@ -65,11 +65,19 @@ const Home: NextPage = () => {
           </div>
         </header>
         <PageSection className="text-center bg-black text-white" id="home">
+          <div className="lg:hidden">
+            <Image
+              src="/assets/logos/logo-white.svg"
+              width="140"
+              height="115"
+              alt="D3J Digital Limited"
+            />
+          </div>
           <h1 className="text-5xl font-primary">
-            A Web Development agency with a twist
+            Not your typical web development agency
           </h1>
           <p className="-mt-5 text-3xl">
-            Stay ahead of the game with our unique subscriptions.
+            Unique subscriptions that scales with your business.
           </p>
           <div className="flex w-auto m-auto">
             <Button
@@ -172,9 +180,7 @@ const Home: NextPage = () => {
                 </p>
               </div>
               <div>
-                <p className="text-xl mb-4 font-bold">
-                  Job management made easy
-                </p>
+                <p className="text-xl mb-4 font-bold">Easy job management</p>
                 <p>
                   View active, queued, and completed tasks whenever you like
                   with your own private Trello board. We aim to respond to each
@@ -380,7 +386,7 @@ const Home: NextPage = () => {
           title="FAQs"
           subtitle="Take a look at some of our most commonly asked questions."
         >
-          <div className="">
+          <div className="md:w-3/4 m-auto">
             <AccordionGroup>
               <Accordion title="How are you different from a typical agency?">
                 <p>

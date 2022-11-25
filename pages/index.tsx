@@ -164,11 +164,11 @@ const Home: NextPage = () => {
               <div>
                 <p className="text-xl mb-4 font-bold">Zero time-wasting</p>
                 <p>
-                  There's nothing worse than pointless meetings, waiting for
-                  responses, and chasing for updates. We've streamlined our
-                  processes to make sure we're as efficient as possible, and
-                  that we deliver on our promise of producing quality over
-                  quantity.
+                  There&apos;s nothing worse than pointless meetings, waiting
+                  for responses, and chasing for updates. We&apos;ve streamlined
+                  our processes to make sure we&apos;re as efficient as
+                  possible, and that we deliver on our promise of producing
+                  quality over quantity.
                 </p>
               </div>
               <div>
@@ -189,9 +189,10 @@ const Home: NextPage = () => {
                 </p>
                 <p>
                   We have over 8 years of industry experience and expertise to
-                  help us provide the highest quality service possible. We're
-                  extremely passionate about what we do, and will do everything
-                  we can to make sure you are satisfied with the results.
+                  help us provide the highest quality service possible.
+                  We&apos;re extremely passionate about what we do, and will do
+                  everything we can to make sure you are satisfied with the
+                  results.
                 </p>
               </div>
             </div>

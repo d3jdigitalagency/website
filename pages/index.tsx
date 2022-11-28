@@ -42,7 +42,7 @@ const Home: NextPage = () => {
           <div className="flex items-center gap-12 container">
             <Image
               src="/assets/logos/logo-black.svg"
-              width="100"
+              width="130"
               height="100%"
               alt="D3J Digital"
             />
@@ -132,8 +132,8 @@ const Home: NextPage = () => {
                 world.
               </h2>
               <p>
-                We're a small team of passionate web developers, designers, and
-                digital marketers who want to make web-based services more
+                We&apos;re a small team of passionate web developers, designers,
+                and digital marketers who want to make web-based services more
                 accessible to everyone and every budget. What is usually costly
                 and time-consuming is now as easy as signing up for your
                 favorite streaming service.
@@ -143,17 +143,17 @@ const Home: NextPage = () => {
                 is the first step in ensuring your business stays ahead of the
                 game. For a fixed monthly fee, you get access to your dedicated
                 developer, who will get to know you and your business and work
-                through your requests to the highest possible standard. It's
-                like having your employee but without the responsibility and
-                overhead.
+                through your requests to the highest possible standard.
+                It&apos;s like having your employee but without the
+                responsibility and overhead.
               </p>
               <p>
-                Unlike other agencies, we don't send quotes, proposals, and
+                Unlike other agencies, we don&apos;t send quotes, proposals, and
                 invoices. Instead, you have access to a private job board where
-                you can list as many tasks as you'd like, and we'll work through
-                them one at a time. We also don't tie you into a contract or
-                minimum term. You only pay when you need us and can cancel your
-                subscription at any time.
+                you can list as many tasks as you&apos;d like, and we&apos;ll
+                work through them one at a time. We also don&apos;t tie you into
+                a contract or minimum term. You only pay when you need us and
+                can cancel your subscription at any time.
               </p>
             </div>
             <div className="hidden md:block">
@@ -183,8 +183,8 @@ const Home: NextPage = () => {
               </h2>
               <p>
                 Finding a full-time employee or contractor can be time-consuming
-                and costly. Once they're onboard, you face paying hefty
-                salaries, fees and expenses. Don't forget the added
+                and costly. Once they&apos;re onboard, you face paying hefty
+                salaries, fees and expenses. Don&apos;t forget the added
                 responsibilities that come with being an employer. It could be
                 easier to offload your work to us.
               </p>
@@ -211,7 +211,7 @@ const Home: NextPage = () => {
                 partner to provide them with a quick, reliable, and
                 cost-effective service. Whether you need ad-hoc jobs completed,
                 an extra pair of hands to work alongside your current team, or
-                someone to take on a whole project, we're here and ready to
+                someone to take on a whole project, we&apos;re here and ready to
                 help.
               </p>
               <p>
@@ -471,8 +471,8 @@ const Home: NextPage = () => {
               <Accordion title="Is there a limit to how many requests I can have?">
                 <p>
                   Once subscribed, you can add as many web development requests
-                  to your backlog as you'd like, and they will be completed in
-                  order of priority.
+                  to your backlog as you&apos;d like, and they will be completed
+                  in order of priority.
                 </p>
               </Accordion>
               <Accordion title="How fast will requests be completed?">
@@ -485,8 +485,8 @@ const Home: NextPage = () => {
               </Accordion>
               <Accordion title="Who are the developers?">
                 <p>
-                  D3J Digital is a one-person agency, so you'll work with me,
-                  Dom, directly. We may occasionally outsource work, such as
+                  D3J Digital is a one-person agency, so you&apos;ll work with
+                  me, Dom, directly. We may occasionally outsource work, such as
                   design and marketing, to our trusted partners.
                 </p>
               </Accordion>

@@ -32,7 +32,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="font-body">
-        <header className="sticky top-0 z-10 bg-white border-b border-black">
+        <header className="bg-white border-b border-black">
           <div className="hidden md:block">
             <Banner>
               Our subscriptions come with no contract, no minimum term, and you
@@ -42,8 +42,8 @@ const Home: NextPage = () => {
           <div className="flex items-center gap-12 container">
             <Image
               src="/assets/logos/logo-black.svg"
-              width="130"
-              height="100"
+              width="100"
+              height="100%"
               alt="D3J Digital"
             />
             <div className="hidden lg:block">
@@ -74,12 +74,15 @@ const Home: NextPage = () => {
           <div className="grid md:grid-cols-2 gap-20">
             <div className="grid gap-6">
               <h1 className="text-5xl font-accent">
-                We&apos;re a web development agency with a modern twist
+                We&apos;re a web dev agency with a twist.
               </h1>
               <p className="text-2xl font-light">
-                Our carefully curated subscriptions are designed to scale your
-                business through professional web development services for a
-                fixed monthly price.
+                Think of Netflix, but for web development. D3J Digital offers
+                one of the first Web Development as a Subscription service. Try
+                us and see how we can help scale your business.
+              </p>
+              <p className="text-2xl">
+                No contract. No min. term. Cancel anytime.
               </p>
               <div className="flex gap-6">
                 <Button
@@ -91,44 +94,12 @@ const Home: NextPage = () => {
                   onClick={() => (window.location.href = '#plans')}
                 />
               </div>
-              <hr className="my-2" />
-              <div>
-                <p className="text-xl font-bold">
-                  Built with automation and task management in mind.
-                </p>
-                <div className="flex justify-between">
-                  <Image
-                    src="/assets/logos/trello-logo.svg"
-                    width="100%"
-                    height="100%"
-                    alt="Trello"
-                  />
-                  <Image
-                    src="/assets/logos/stripe-logo.svg"
-                    width="100%"
-                    height="100%"
-                    alt="Stripe"
-                  />
-                  <Image
-                    src="/assets/logos/slack-logo.svg"
-                    width="100%"
-                    height="100%"
-                    alt="Slack"
-                  />
-                  <Image
-                    src="/assets/logos/zapier-logo.svg"
-                    width="100%"
-                    height="100%"
-                    alt="Zapier"
-                  />
-                </div>
-              </div>
             </div>
             <div className="hidden md:block">
               <Image
                 src="/assets/images/undraw/developer.svg"
                 width="550"
-                height="550"
+                height="360"
                 alt="Developer"
               />
             </div>
@@ -157,38 +128,39 @@ const Home: NextPage = () => {
             <div className="grid gap-6">
               <Pill label="About us" />
               <h2 className="text-4xl font-accent">
-                Your perfect web development partner in an ever-changing world.
+                D3J is your perfect web development partner in an ever-changing
+                world.
               </h2>
               <p>
-                We&apos;re a small team of passionate web developers, designers,
-                and digital marketers who want to make web-based services more
-                accessible to everyone and every budget. What is usually a
-                costly and time consuming process, is now as easy as signing up
-                to your favoruite streaming service.
+                We're a small team of passionate web developers, designers, and
+                digital marketers who want to make web-based services more
+                accessible to everyone and every budget. What is usually costly
+                and time-consuming is now as easy as signing up for your
+                favorite streaming service.
               </p>
               <p>
-                Our unique subscription model puts you in the driving seat, and
-                is the first step in making sure your business stays ahead of
-                the game. For a fixed monthly fee, you get access to your own
-                dedicated developer who will get to know you and your business,
-                and work through your requests to the highest possible standard.
-                It&apos;s like having your own employee, but without the
-                responsibility and overhead.
+                Our unique subscription model puts you in the driving seat and
+                is the first step in ensuring your business stays ahead of the
+                game. For a fixed monthly fee, you get access to your dedicated
+                developer, who will get to know you and your business and work
+                through your requests to the highest possible standard. It's
+                like having your employee but without the responsibility and
+                overhead.
               </p>
               <p>
-                Unlike other agencies, we don&apos;t send quotes, proposals, and
+                Unlike other agencies, we don't send quotes, proposals, and
                 invoices. Instead, you have access to a private job board where
-                you can list as many tasks as you&apos;d like, and we&apos;ll
-                work through them one by one. We also don&apos;t tie you into a
-                contract or minimum term. You only pay when you need us, and can
-                cancel your subscription at anytime.
+                you can list as many tasks as you'd like, and we'll work through
+                them one at a time. We also don't tie you into a contract or
+                minimum term. You only pay when you need us and can cancel your
+                subscription at any time.
               </p>
             </div>
             <div className="hidden md:block">
               <Image
                 src="/assets/images/undraw/world.svg"
                 width="620"
-                height="620"
+                height="500"
                 alt="World"
               />
             </div>
@@ -200,7 +172,7 @@ const Home: NextPage = () => {
               <Image
                 src="/assets/images/undraw/agreement.svg"
                 width="560"
-                height="380"
+                height="340"
                 alt="Agreement"
               />
             </div>
@@ -210,15 +182,18 @@ const Home: NextPage = () => {
                 Save thousands on recruitment, employee, and contractor fees.
               </h2>
               <p>
-                Finding a full-time employee or contractor can be time consuming
-                and costly. Once you&apos;ve found them, you then have the
-                burden of paying hefty salaries and additional expenses such as
-                equipment, training, and taxes.
+                Finding a full-time employee or contractor can be time-consuming
+                and costly. Once they're onboard, you face paying hefty
+                salaries, fees and expenses. Don't forget the added
+                responsibilities that come with being an employer. It could be
+                easier to offload your work to us.
               </p>
               <p>
-                Our service provides you with a dedicated remote senior web
-                developer for less than a full-time junior developer per month,
-                and comes with some amazing benefits. It&apos;s a no-brainer.
+                Our service provides a dedicated remote senior web developer for
+                significantly less than what it would cost for a full-time
+                junior developer. You also get the added benefit of some
+                attractive incentives, on-hand expert support, and progress
+                reports.
               </p>
             </div>
           </div>
@@ -228,15 +203,16 @@ const Home: NextPage = () => {
             <div className="grid gap-6">
               <Pill label="For agencies" />
               <h2 className="text-4xl font-accent">
-                Outsource your projects and get delivery with a standard you and
-                your clients will love.
+                Outsource your projects and get rapid, high-quality results you
+                and your clients will love.
               </h2>
               <p>
-                We work closely with a number of agencies, as their web
-                development partner, to provide them with a quick, reliable, and
-                cost-effective service. Whether you need ad-hoc jobs completing,
+                We work closely with several agencies as their web development
+                partner to provide them with a quick, reliable, and
+                cost-effective service. Whether you need ad-hoc jobs completed,
                 an extra pair of hands to work alongside your current team, or
-                someone to take on a whole project, we&apos;d love to help.
+                someone to take on a whole project, we're here and ready to
+                help.
               </p>
               <p>
                 Email us at{' '}
@@ -262,7 +238,7 @@ const Home: NextPage = () => {
               <Image
                 src="/assets/images/undraw/collaborators.svg"
                 width="560"
-                height="350"
+                height="330"
                 alt="Collaborators"
               />
             </div>
@@ -494,37 +470,51 @@ const Home: NextPage = () => {
             <div className="grid gap-4 md:w-3/4 m-auto">
               <Accordion title="Is there a limit to how many requests I can have?">
                 <p>
-                  Once subscribed, you&apos;re able to add as many web
-                  development requests to your backlog as you&apos;d like, and
-                  they will be delivered one by one.
+                  Once subscribed, you can add as many web development requests
+                  to your backlog as you'd like, and they will be completed in
+                  order of priority.
                 </p>
               </Accordion>
               <Accordion title="How fast will requests be completed?">
                 <p>
-                  For minor requests such as bug fixes and CSS tweaks, they will
-                  usually be completed in a day or two. More complex requests
-                  may take longer. We provide an estimated timescale and start
-                  date to each request.
+                  Minor requests such as bug fixes and CSS tweaks will usually
+                  be completed in a day or two. More complex requests may take
+                  longer. We provide an estimated timescale and start date for
+                  each request.
                 </p>
               </Accordion>
               <Accordion title="Who are the developers?">
                 <p>
-                  D3J Digital is a one-man agency, so you&apos;ll work with me,
-                  Dom, directly. Occasionally, we may use our trusted partners
-                  to complete certain tasks, such as design and marketing.
+                  D3J Digital is a one-person agency, so you'll work with me,
+                  Dom, directly. We may occasionally outsource work, such as
+                  design and marketing, to our trusted partners.
                 </p>
+              </Accordion>
+              <Accordion title="Where are you based?">
+                <p>
+                  We are in the UK (GMT), but have clients all around the world
+                  and can work with any time zone.
+                </p>
+              </Accordion>
+              <Accordion title="Are you a legit company?">
+                <p>
+                  Absolutely! We are a registered company in the UK under the
+                  name D3J Digital Limited.
+                </p>
+                <p>Our company number is 14159497.</p>
+                <p>Our VAT registration number is 423631324.</p>
               </Accordion>
               <Accordion title="How do I request jobs?">
                 <p>
                   D3J Digital offers lots of flexibility in how you request jobs
-                  using Trello. Some common ways clients request jobs is
-                  directly via Trello, sharing Google docs, sharing an image, or
+                  using Trello. Some common ways clients request jobs are direct
+                  via Trello, sharing Google docs, sharing an image, or
                   recording a Loom video.
                 </p>
               </Accordion>
               <Accordion title="Are there any refunds if I don't like the service?">
                 <p>
-                  Due to the high quality nature of the work, there will be no
+                  Due to the high-quality nature of the work, there will be no
                   refunds issued.
                 </p>
               </Accordion>
@@ -534,6 +524,31 @@ const Home: NextPage = () => {
                   Stripe.
                 </p>
               </Accordion>
+            </div>
+          </div>
+        </Section>
+        <Section id="poweredby">
+          <div className="grid gap-6 text-center">
+            <h2 className="text-4xl font-accent">Powered by</h2>
+            <div className="grid md:grid-cols-3 text-center">
+              <Image
+                src="/assets/logos/trello-logo.svg"
+                width="100%"
+                height="100%"
+                alt="Trello"
+              />
+              <Image
+                src="/assets/logos/stripe-logo.svg"
+                width="100%"
+                height="100%"
+                alt="Stripe"
+              />
+              <Image
+                src="/assets/logos/slack-logo.svg"
+                width="100%"
+                height="100%"
+                alt="Slack"
+              />
             </div>
           </div>
         </Section>

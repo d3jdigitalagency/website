@@ -18,16 +18,12 @@ module.exports = {
     },
     fontFamily: {
       body: ['"Montserrat"'],
-      primary: ['"Grifter"'],
+      accent: ['"Grifter"'],
     },
     extend: {
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
-        primary: '#ffe01b',
-      },
-      backgroundImage: {
-        noise: "url('/assets/backgrounds/noise.png')",
       },
     },
   },

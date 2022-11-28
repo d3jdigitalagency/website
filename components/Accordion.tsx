@@ -10,7 +10,7 @@ const Accordion = ({ ...props }: IAccordion) => {
   const [opened, setOpened] = useState(false);
 
   return (
-    <div className="mb-4 border-b-2 border-black">
+    <div className="border-b-2 border-black">
       <div
         className="flex justify-between mb-4 font-bold cursor-pointer"
         onClick={() => setOpened(!opened)}
@@ -30,5 +30,4 @@ const Accordion = ({ ...props }: IAccordion) => {
     </div>
   );
 };
-
 export default Accordion;

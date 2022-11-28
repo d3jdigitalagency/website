@@ -2,32 +2,27 @@ import Button from './Button';
 
 export interface IPlan {
   title: string;
+  subtitle: string;
   price: string;
-  disclaimer?: string;
-  options?: Array<string>;
-  onClick?: () => {};
+  onClick: () => void;
 }
 
 const Plan = ({ ...props }: IPlan) => {
   return (
-    <div className="flex flex-col gap-4 p-8 bg-white">
-      <p className="font-primary text-2xl">{props.title}</p>
-      <p className="font-bold text-4xl my-4">
-        £{props.price} <span className="-ml-1 text-sm">+ VAT</span>
+    <div className="grid gap-4 p-8 bg-white border border-b-4 border-black rounded">
+      <p className="font-bold">{props.title}</p>
+      <p className="text-3xl font-bold">
+        £{props.price} <span className="text-sm">+ VAT</span>
       </p>
-      <p className="-mt-6 mb-4 text-sm text-gray-500">{props.disclaimer}</p>
-      <div className="flex w-auto font-primary">
-        <Button label="Get started" onClick={props.onClick} />
-      </div>
-      <div className="border-t my-4"></div>
-      <div className="text-left">
-        <p className="font-primary mb-4">What is included:</p>
-        <ul className="list-disc pl-4">
-          {props.options?.map((option, index) => {
-            return <li key={index}>{option}</li>;
-          })}
-        </ul>
-      </div>
+      <p className="-mt-2 text-sm text-gray-500">{props.subtitle}</p>
+      <Button label="Get started" onClick={props.onClick} />
+      <hr className="my-2" />
+      <p className="font-bold">What&apos;s included</p>
+      <ul className="list-disc pl-4">
+        <li>Unlimited requests</li>
+        <li>Unlimited support</li>
+        <li>Unlimited users</li>
+      </ul>
     </div>
   );
 };

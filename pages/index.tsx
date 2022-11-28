@@ -10,468 +10,546 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Accordion from '../components/Accordion';
-import AccordionGroup from '../components/AccordionGroup';
+import Banner from '../components/Banner';
 import Benefit from '../components/Benefit';
 import Button from '../components/Button';
-import PageSection from '../components/PageSection';
+import Feature from '../components/Feature';
+import Navigation from '../components/Navigation';
+import Pill from '../components/Pill';
 import Plan from '../components/Plan';
+import Section from '../components/Section';
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>D3J Digital - Web Development as a Subscription</title>
         <meta
           name="description"
-          content="Unlimited web development services for one fixed monthly price. Save thousands on recruitment, agency and contractor fees. No contract. Cancel anytime."
+          content="Unlimited web development services for a fixed monthly price. Save thousands on recruitment, agency, and contractor fees. No contract. Cancel anytime."
         />
+        <meta name="robots" content="all" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="font-body">
-        <header className="hidden lg:block bg-black text-white">
-          <div className="flex justify-center md:justify-between items-center container font-bold">
+        <header className="sticky top-0 z-10 bg-white border-b border-black">
+          <div className="hidden md:block">
+            <Banner>
+              Our subscriptions come with no contract, no minimum term, and you
+              can cancel anytime.
+            </Banner>
+          </div>
+          <div className="flex items-center gap-12 container">
             <Image
-              src="/assets/logos/logo-white.svg"
-              width="140"
-              height="115"
-              alt="D3J Digital Limited"
+              src="/assets/logos/logo-black.svg"
+              width="130"
+              height="100"
+              alt="D3J Digital"
             />
-            <ul className="hidden md:flex gap-12">
-              <li
-                className="cursor-pointer"
-                onClick={() => (window.location.href = '#process')}
-              >
-                Get started
-              </li>
-              <li
-                className="cursor-pointer"
-                onClick={() => (window.location.href = '#benefits')}
-              >
-                Benefits
-              </li>
-              <li
-                className="cursor-pointer"
-                onClick={() => (window.location.href = '#plans')}
-              >
-                Plans
-              </li>
-              <li
-                className="cursor-pointer"
-                onClick={() => (window.location.href = '#faqs')}
-              >
-                FAQs
-              </li>
-            </ul>
-          </div>
-        </header>
-        <PageSection className="text-center bg-black text-white" id="home">
-          <div className="lg:hidden">
-            <Image
-              src="/assets/logos/logo-white.svg"
-              width="140"
-              height="115"
-              alt="D3J Digital Limited"
-            />
-          </div>
-          <h1 className="text-5xl font-primary">
-            Not your typical web development agency
-          </h1>
-          <p className="-mt-5 text-3xl">
-            Unique subscriptions that scales with your business.
-          </p>
-          <div className="flex w-auto m-auto">
-            <Button
-              type="primary"
-              label="View Plans"
-              onClick={() => (window.location.href = '#plans')}
-            />
-          </div>
-          <ChevronDoubleDownIcon
-            className="w-10 h-10 mx-auto animate-bounce cursor-pointer"
-            onClick={() => (window.location.href = '#process')}
-          />
-        </PageSection>
-        <PageSection
-          id="process"
-          title="Get started in 3 easy steps"
-          subtitle="You'll be up and running in the time it takes to make a coffee."
-        >
-          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-12 text-center">
-            <div className="col-span-1">
-              <Image
-                src="/assets/images/step-1.svg"
-                width="200"
-                height="115"
-                alt="Step 1"
-              />
-              <p className="text-xl mt-6 mb-4 font-bold">Choose a plan</p>
-              <p>
-                Have a look at our plans below and choose the right one for you.
-                The longer you commit, the more you save.
-              </p>
-            </div>
-            <div className="col-span-1">
-              <Image
-                src="/assets/images/step-2.svg"
-                width="200"
-                height="115"
-                alt="Step 2"
-              />
-              <p className="text-xl mt-6 mb-4 font-bold">
-                Access your job board
-              </p>
-              <p>
-                Get invited to your private job board, where you can add
-                requests, ask questions, and keep track of progress.
-              </p>
-            </div>
-            <div className="col-span-1">
-              <Image
-                src="/assets/images/step-3.svg"
-                width="200"
-                height="115"
-                alt="Step 3"
-              />
-              <p className="text-xl mt-6 mb-4 font-bold">Put your feet up</p>
-              <p>
-                We will begin to work through your requests so you can sit back
-                and relax, knowing everything is taken care of.
-              </p>
-            </div>
-          </div>
-          <div className="w-auto m-auto">
-            <Button
-              type="secondary"
-              label="View benefits"
-              onClick={() => (window.location.href = '#benefits')}
-            />
-          </div>
-        </PageSection>
-        <PageSection
-          className="bg-gray-50"
-          id="about"
-          title="Simplicity is the ultimate sophistication"
-          subtitle="Our clients love our no-nonsense approach."
-        >
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="flex flex-col justify-center p-8 bg-white">
-              <Image
-                src="/assets/logos/trello-logo-gradient-blue.svg"
-                width="200"
-                height="115"
-                alt="Trello"
-              />
-              <Image
-                src="/assets/logos/stripe-logo-gradient-purple.svg"
-                width="200"
-                height="115"
-                alt="Stripe"
+            <div className="hidden lg:block">
+              <Navigation
+                items={[
+                  { label: 'About', href: '#about' },
+                  { label: 'Get Started', href: '#getstarted' },
+                  { label: 'Benefits', href: '#benefits' },
+                  { label: 'Plans', href: '#plans' },
+                  { label: 'FAQs', href: '#faqs' },
+                ]}
               />
             </div>
-            <div className="flex flex-col gap-12">
-              <div>
-                <p className="text-xl mb-4 font-bold">Zero time-wasting</p>
-                <p>
-                  There&apos;s nothing worse than pointless meetings, waiting
-                  for responses, and chasing for updates. We&apos;ve streamlined
-                  our processes to make sure we&apos;re as efficient as
-                  possible, and that we deliver on our promise of producing
-                  quality over quantity.
-                </p>
-              </div>
-              <div>
-                <p className="text-xl mb-4 font-bold">Easy job management</p>
-                <p>
-                  View active, queued, and completed tasks whenever you like
-                  with your own private Trello board. We aim to respond to each
-                  request within 24 hours with an estimated timescale and start
-                  date. Everything is managed on your job board, so you always
-                  have full visibility.
-                </p>
-              </div>
-              <div>
-                <p className="text-xl mb-4 font-bold">
-                  Years of knowledge and experience
-                </p>
-                <p>
-                  We have over 8 years of industry experience and expertise to
-                  help us provide the highest quality service possible.
-                  We&apos;re extremely passionate about what we do, and will do
-                  everything we can to make sure you are satisfied with the
-                  results.
-                </p>
-              </div>
-            </div>
-          </div>
-        </PageSection>
-        <PageSection
-          id="benefits"
-          title="Benefits of our service"
-          subtitle="Perks you don't even get from a multi-million dollar agency."
-        >
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-            <Benefit
-              icon={<CheckBadgeIcon className="w-14 h-14 mx-auto" />}
-              title="Private Job Board"
-              description="Easily keep track of requests, progress, and communication via a private Trello board."
-            />
-            <Benefit
-              icon={<CurrencyPoundIcon className="w-14 h-14 mx-auto" />}
-              title="Fixed Monthly Price"
-              description="No quotes, no invoices, no hidden surprises. Just the same price each month."
-            />
-            <Benefit
-              icon={<ChevronDoubleDownIcon className="w-14 h-14 mx-auto" />}
-              title="Keep Overheads Low"
-              description="Cheaper than a full-time employee or agency, with some amazing tax incentives."
-            />
-            <Benefit
-              icon={<UserCircleIcon className="w-14 h-14 mx-auto" />}
-              title="Dedicated Developer"
-              description="Your on-hand industry expert is there to work with you every step of the way."
-            />
-            <Benefit
-              icon={<ChartBarSquareIcon className="w-14 h-14 mx-auto" />}
-              title="Unlimited Requests"
-              description="Got an issue with your site or want a new feature building? It's all included."
-            />
-            <Benefit
-              icon={<XCircleIcon className="w-14 h-14 mx-auto" />}
-              title="Flexible and scalable"
-              description="No contract. No minimum term. Only pay when you need us and cancel anytime."
-            />
-          </div>
-          <div className="w-auto m-auto">
-            <Button
-              type="secondary"
-              label="View plans"
-              onClick={() => (window.location.href = '#plans')}
-            />
-          </div>
-        </PageSection>
-        <PageSection
-          className="bg-gray-50"
-          id="sow"
-          title="Apps, websites, hosting & more"
-          subtitle="We are experts in most modern web technologies."
-        >
-          <div className="grid md:grid-cols-4 gap-12 p-16 font-bold border-4 border-black">
-            {[
-              'WordPress',
-              'Elementor',
-              'Webflow',
-              'Hubspot',
-              'WooCommerce',
-              'Shopify',
-              'Magento',
-              'Stripe',
-              'Laravel',
-              'Lumen',
-              'Zend',
-              'Symfony',
-              'Vanilla JS',
-              'React',
-              'Vue',
-              'jQuery',
-              'API',
-              'PWA',
-              'SPA',
-              'SaaS',
-              'MailChimp',
-              'Mailgun',
-              'SendGrid',
-              'Custom SMTP',
-              'AWS',
-              'Google Cloud',
-              'Digital Ocean',
-              'Bare Metal',
-            ].map((option, index) => {
-              return (
-                <p key={index} className="pb-8 border-b-4 border-black">
-                  {option}
-                </p>
-              );
-            })}
-          </div>
-        </PageSection>
-        <PageSection
-          id="plans"
-          title="Choose a plan that's right for you"
-          subtitle="Top level service for a fraction of the price."
-        >
-          <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
-            <Plan
-              title="Monthly"
-              price="1,500"
-              disclaimer="Pause or cancel anytime"
-              options={[
-                'Unlimited requests',
-                'Unlimited support',
-                'Unlimited users',
-              ]}
-              onClick={() => (
-                window.open('https://buy.stripe.com/5kAg1ObIY2Jy2Zi4gn'),
-                '_blank'
-              )}
-            />
-            <Plan
-              title="Quarterly"
-              price="1,333"
-              disclaimer="£4,000 + VAT paid quarterly"
-              options={[
-                'Unlimited requests',
-                'Unlimited support',
-                'Unlimited users',
-              ]}
-              onClick={() => (
-                window.open('https://buy.stripe.com/5kAg1O7sI97W2Zi9AI'),
-                '_blank'
-              )}
-            />
-            <Plan
-              title="Yearly"
-              price="1,250"
-              disclaimer="£15,000 + VAT paid annually"
-              options={[
-                'Unlimited requests',
-                'Unlimited support',
-                'Unlimited users',
-              ]}
-              onClick={() => (
-                window.open('https://buy.stripe.com/fZe02Q3cs0BqczS7sB'),
-                '_blank'
-              )}
-            />
-            <div className="sm:col-span-3 lg:col-span-1 flex flex-col gap-4 p-8 bg-white">
-              <p className="font-primary text-2xl">Book a Call</p>
-              <p>
-                Learn more about how D3J Digital works and how it can help you.
-              </p>
-              <p
-                className="font-bold cursor-pointer"
-                onClick={() => (
-                  window.open('https://calendly.com/d3j/30min'), '_blank'
-                )}
-              >
-                Book a call
-              </p>
-              <hr className="my-8" />
-              <p className="font-primary text-2xl">Already subscribed?</p>
-              <p>Awesome! You can manage your subscription at any time.</p>
-              <p
-                className="font-bold cursor-pointer"
+            <div className="ml-auto">
+              <Button
+                label="Login"
                 onClick={() => (
                   window.open(
                     'https://billing.stripe.com/p/login/fZecQT8sTgLH6s08ww'
                   ),
                   '_blank'
                 )}
-              >
-                Manage subscription
+              />
+            </div>
+          </div>
+        </header>
+        <Section id="home">
+          <div className="grid md:grid-cols-2 gap-20">
+            <div className="grid gap-6">
+              <h1 className="text-5xl font-accent">
+                We&apos;re a web development agency with a modern twist
+              </h1>
+              <p className="text-2xl font-light">
+                Our carefully curated subscriptions are designed to scale your
+                business through professional web development services for a
+                fixed monthly price.
+              </p>
+              <div className="flex gap-6">
+                <Button
+                  label="Learn More"
+                  onClick={() => (window.location.href = '#about')}
+                />
+                <Button
+                  label="View Plans"
+                  onClick={() => (window.location.href = '#plans')}
+                />
+              </div>
+              <hr className="my-2" />
+              <div>
+                <p className="text-xl font-bold">
+                  Built with automation and task management in mind.
+                </p>
+                <div className="flex justify-between">
+                  <Image
+                    src="/assets/logos/trello-logo.svg"
+                    width="100%"
+                    height="100%"
+                    alt="Trello"
+                  />
+                  <Image
+                    src="/assets/logos/stripe-logo.svg"
+                    width="100%"
+                    height="100%"
+                    alt="Stripe"
+                  />
+                  <Image
+                    src="/assets/logos/slack-logo.svg"
+                    width="100%"
+                    height="100%"
+                    alt="Slack"
+                  />
+                  <Image
+                    src="/assets/logos/zapier-logo.svg"
+                    width="100%"
+                    height="100%"
+                    alt="Zapier"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="hidden md:block">
+              <Image
+                src="/assets/images/undraw/developer.svg"
+                width="550"
+                height="550"
+                alt="Developer"
+              />
+            </div>
+          </div>
+        </Section>
+        <Section id="usps">
+          <Feature>
+            <div className="grid md:grid-cols-3 text-center">
+              <div className="p-8">
+                <p className="text-gray-400">10+ years</p>
+                <p className="text-xl">Industry experience</p>
+              </div>
+              <div className="p-8">
+                <p className="text-gray-400">Working with</p>
+                <p className="text-xl">Clients around the globe</p>
+              </div>
+              <div className="p-8">
+                <p className="text-gray-400">Delivering</p>
+                <p className="text-xl">Top-notch service</p>
+              </div>
+            </div>
+          </Feature>
+        </Section>
+        <Section id="about">
+          <div className="grid md:grid-cols-2 gap-20">
+            <div className="grid gap-6">
+              <Pill label="About us" />
+              <h2 className="text-4xl font-accent">
+                Your perfect web development partner in an ever-changing world.
+              </h2>
+              <p>
+                We&apos;re a small team of passionate web developers, designers,
+                and digital marketers who want to make web-based services more
+                accessible to everyone and every budget. What is usually a
+                costly and time consuming process, is now as easy as signing up
+                to your favoruite streaming service.
+              </p>
+              <p>
+                Our unique subscription model puts you in the driving seat, and
+                is the first step in making sure your business stays ahead of
+                the game. For a fixed monthly fee, you get access to your own
+                dedicated developer who will get to know you and your business,
+                and work through your requests to the highest possible standard.
+                It&apos;s like having your own employee, but without the
+                responsibility and overhead.
+              </p>
+              <p>
+                Unlike other agencies, we don&apos;t send quotes, proposals, and
+                invoices. Instead, you have access to a private job board where
+                you can list as many tasks as you&apos;d like, and we&apos;ll
+                work through them one by one. We also don&apos;t tie you into a
+                contract or minimum term. You only pay when you need us, and can
+                cancel your subscription at anytime.
+              </p>
+            </div>
+            <div className="hidden md:block">
+              <Image
+                src="/assets/images/undraw/world.svg"
+                width="620"
+                height="620"
+                alt="World"
+              />
+            </div>
+          </div>
+        </Section>
+        <Section id="businesses">
+          <div className="grid md:grid-cols-2 gap-20">
+            <div className="hidden md:block">
+              <Image
+                src="/assets/images/undraw/agreement.svg"
+                width="560"
+                height="380"
+                alt="Agreement"
+              />
+            </div>
+            <div className="grid gap-6">
+              <Pill label="For businesses" />
+              <h2 className="text-4xl font-accent">
+                Save thousands on recruitment, employee, and contractor fees.
+              </h2>
+              <p>
+                Finding a full-time employee or contractor can be time consuming
+                and costly. Once you&apos;ve found them, you then have the
+                burden of paying hefty salaries and additional expenses such as
+                equipment, training, and taxes.
+              </p>
+              <p>
+                Our service provides you with a dedicated remote senior web
+                developer for less than a full-time junior developer per month,
+                and comes with some amazing benefits. It&apos;s a no-brainer.
               </p>
             </div>
           </div>
-          <div className="text-center">
-            <Image
-              src="/assets/logos/powered-by-stripe-badge.svg"
-              width="300"
-              height="40"
-              alt="D3J Digital Limited"
+        </Section>
+        <Section id="agencies">
+          <div className="grid md:grid-cols-2 gap-20">
+            <div className="grid gap-6">
+              <Pill label="For agencies" />
+              <h2 className="text-4xl font-accent">
+                Outsource your projects and get delivery with a standard you and
+                your clients will love.
+              </h2>
+              <p>
+                We work closely with a number of agencies, as their web
+                development partner, to provide them with a quick, reliable, and
+                cost-effective service. Whether you need ad-hoc jobs completing,
+                an extra pair of hands to work alongside your current team, or
+                someone to take on a whole project, we&apos;d love to help.
+              </p>
+              <p>
+                Email us at{' '}
+                <a
+                  href="mailto:hello@d3j.digital"
+                  className="underline cursor-pointer"
+                >
+                  hello@d3j.digital
+                </a>
+                , or{' '}
+                <span
+                  className="font-bold cursor-pointer"
+                  onClick={() => (
+                    window.open('https://calendly.com/d3j/30min'), '_blank'
+                  )}
+                >
+                  book a call
+                </span>
+                , to learn more.
+              </p>
+            </div>
+            <div className="hidden md:block">
+              <Image
+                src="/assets/images/undraw/collaborators.svg"
+                width="560"
+                height="350"
+                alt="Collaborators"
+              />
+            </div>
+          </div>
+        </Section>
+        <Section id="getstarted">
+          <div className="grid gap-6 text-center">
+            <Pill label="Get started" />
+            <h2 className="text-4xl font-accent">As easy as 1, 2, 3...</h2>
+            <div className="grid md:grid-cols-3 gap-20 my-6">
+              <div>
+                <Image
+                  src="/assets/images/step-1.svg"
+                  width="200"
+                  height="115"
+                  alt="Step 1"
+                />
+                <h3 className="text-xl font-bold mt-6 mb-4">Choose a plan</h3>
+                <p>
+                  Have a look at our plans below and choose the right one for
+                  you. The longer you commit, the more you save.
+                </p>
+              </div>
+              <div>
+                <Image
+                  src="/assets/images/step-2.svg"
+                  width="200"
+                  height="115"
+                  alt="Step 2"
+                />
+                <h3 className="text-xl font-bold mt-6 mb-4">
+                  Access your job board
+                </h3>
+                <p>
+                  Get invited to your private job board, where you can add
+                  requests, ask questions, and keep track of progress.
+                </p>
+              </div>
+              <div>
+                <Image
+                  src="/assets/images/step-3.svg"
+                  width="200"
+                  height="115"
+                  alt="Step 3"
+                />
+                <h3 className="text-xl font-bold mt-6 mb-4">
+                  Put your feet up
+                </h3>
+                <p>
+                  We will begin to work through your requests so you can sit
+                  back and relax, knowing everything is taken care of.
+                </p>
+              </div>
+            </div>
+            <Button
+              label="View Plans"
+              onClick={() => (window.location.href = '#plans')}
             />
           </div>
-        </PageSection>
-        <PageSection
-          className="bg-gray-50"
-          id="faqs"
-          title="FAQs"
-          subtitle="Take a look at some of our most commonly asked questions."
-        >
-          <div className="md:w-3/4 m-auto">
-            <AccordionGroup>
-              <Accordion title="How are you different from a typical agency?">
-                <p>
-                  An typical agency charges for an amount of time or work. If
-                  you change your mind or want other things done during or after
-                  the development phase, you may be faced with extra costs. Our
-                  pricing model is simple: you pay a flat monthly fee and can
-                  ask for as many things as you want, when you want.
-                </p>
-              </Accordion>
-              <Accordion title="Would it be better to hire a full-time developer?">
-                <p>
-                  Finding the right developer for the job can be time consuming
-                  and costly. Mid-Senior level developer salaries start anywhere
-                  from £30k+, not including equipment, training, pensions, etc.
-                  Our fees are significantly cheaper than hiring a full-time
-                  developer, and you get the added benefit of cancelling and
-                  restarting your subscription when you want.
-                </p>
-              </Accordion>
-              <Accordion title="How do requests work?">
-                <p>
-                  You will have access to a private job board where you add
-                  requests to your backlog. You can only have one active request
-                  at a time, which we aim to complete as soon as possible.
-                </p>
-              </Accordion>
-              <Accordion title="What type of requests can I submit?">
-                <p>
-                  Anything, within reason. Examples of requests include bug
-                  fixes, implementing new page designs, setting up plugins,
-                  integrating with 3rd parties, and more.
-                </p>
-              </Accordion>
-              <Accordion title="Do I really get unlimited requests?">
-                <p>
-                  It might sound too good, but it is true! You can add as many
-                  requests to your backlog as you like, and we will keep working
-                  through them.
-                </p>
-              </Accordion>
-              <Accordion title="What if I'm not happy with the work?">
-                <p>
-                  We pride ourselves on delivering the highest quality work. If
-                  you are not happy, we will do our best to work with you to
-                  rectify any issues as soon as possible.
-                </p>
-              </Accordion>
-              <Accordion title="How are payments handled?">
-                <p>We use Stripe to manage payments and subscriptions.</p>
-                <p>
-                  We do not store or process any of your personal details on our
-                  servers.
-                </p>
-              </Accordion>
-              <Accordion title="Do you offer any refunds?">
-                <p>
-                  Unfortunately, due to the nature of the work, we do not offer
-                  any refunds.
-                </p>
-              </Accordion>
-            </AccordionGroup>
-            <p className="mt-16 text-center">
-              More questions? Email us at{' '}
-              <a href="mailto:hello@d3j.digital" className="text-blue-500">
-                hello@d3j.digital
-              </a>
-            </p>
+        </Section>
+        <Section id="benefits">
+          <div className="grid gap-6 text-center">
+            <Pill label="Benefits" />
+            <h2 className="text-4xl font-accent">Perks of using our service</h2>
+            <div className="grid md:grid-cols-3 gap-20 my-6">
+              <Benefit
+                icon={<CheckBadgeIcon className="w-14 h-14 mx-auto" />}
+                title="Private Job Board"
+                description="Easily keep track of requests, progress, and communication via a private Trello board."
+              />
+              <Benefit
+                icon={<CurrencyPoundIcon className="w-14 h-14 mx-auto" />}
+                title="Fixed Monthly Price"
+                description="No quotes, no invoices, no hidden surprises. Just the same price each month."
+              />
+              <Benefit
+                icon={<ChevronDoubleDownIcon className="w-14 h-14 mx-auto" />}
+                title="Keep Overheads Low"
+                description="Cheaper than a full-time employee or agency, with some amazing tax incentives."
+              />
+              <Benefit
+                icon={<UserCircleIcon className="w-14 h-14 mx-auto" />}
+                title="Dedicated Developer"
+                description="Your on-hand industry expert is there to work with you every step of the way."
+              />
+              <Benefit
+                icon={<ChartBarSquareIcon className="w-14 h-14 mx-auto" />}
+                title="Unlimited Requests"
+                description="Whether you have an issue with your site, or want something new, it's all included."
+              />
+              <Benefit
+                icon={<XCircleIcon className="w-14 h-14 mx-auto" />}
+                title="Flexible and scalable"
+                description="No contract. No minimum term. Only pay when you need us and cancel anytime."
+              />
+            </div>
           </div>
-        </PageSection>
+        </Section>
+        <Section id="sow">
+          <div className="grid gap-12">
+            <div className="grid gap-6 text-center">
+              <Pill label="Scope of work" />
+              <h2 className="text-4xl font-accent">
+                Apps, websites, hosting & more
+              </h2>
+            </div>
+            <Feature>
+              <div className="grid md:grid-cols-4 gap-16 p-16 mt-6 overflow-auto">
+                {[
+                  'WordPress',
+                  'Elementor',
+                  'Webflow',
+                  'Hubspot',
+                  'WooCommerce',
+                  'Shopify',
+                  'Magento',
+                  'Stripe',
+                  'Laravel',
+                  'Lumen',
+                  'Zend',
+                  'Symfony',
+                  'Vanilla JS',
+                  'React',
+                  'Vue',
+                  'jQuery',
+                  'API',
+                  'PWA',
+                  'SPA',
+                  'SaaS',
+                  'MailChimp',
+                  'Mailgun',
+                  'SendGrid',
+                  'Custom SMTP',
+                  'AWS',
+                  'Google Cloud',
+                  'Digital Ocean',
+                  'Bare Metal',
+                ].map((option, index) => {
+                  return (
+                    <p key={index} className="pb-8 border-b-4 border-gray-500">
+                      {option}
+                    </p>
+                  );
+                })}
+              </div>
+            </Feature>
+          </div>
+        </Section>
+        <Section id="plans">
+          <div className="grid gap-12">
+            <div className="grid gap-6 text-center">
+              <Pill label="Plans" />
+              <h2 className="text-4xl font-accent">
+                Choose a plan that&apos;s right for you
+              </h2>
+            </div>
+            <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-12">
+              <Plan
+                title="Monthly"
+                subtitle="Pause or cancel anytime"
+                price="1,500"
+                onClick={() => (
+                  window.open('https://buy.stripe.com/5kAg1ObIY2Jy2Zi4gn'),
+                  '_blank'
+                )}
+              />
+              <Plan
+                title="Quarterly"
+                subtitle="£4,000 + VAT paid quarterly"
+                price="1,333"
+                onClick={() => (
+                  window.open('https://buy.stripe.com/5kAg1O7sI97W2Zi9AI'),
+                  '_blank'
+                )}
+              />
+              <Plan
+                title="Yearly"
+                subtitle="£15,000 + VAT paid annually"
+                price="1,250"
+                onClick={() => (
+                  window.open('https://buy.stripe.com/fZe02Q3cs0BqczS7sB'),
+                  '_blank'
+                )}
+              />
+              <div className="grid sm:col-span-3 lg:col-span-1 gap-4 p-8 bg-white border border-b-4 border-black rounded">
+                <p className="font-bold">Book a Call</p>
+                <p>
+                  Learn more about how D3J Digital works and how it can help
+                  you.
+                </p>
+                <p
+                  className="font-bold cursor-pointer"
+                  onClick={() => (
+                    window.open('https://calendly.com/d3j/30min'), '_blank'
+                  )}
+                >
+                  Book a call
+                </p>
+                <hr className="my-2" />
+                <p className="font-bold">Already subscribed?</p>
+                <p>Awesome! Did you know you can manage it at any time?</p>
+                <p
+                  className="font-bold cursor-pointer"
+                  onClick={() => (
+                    window.open(
+                      'https://billing.stripe.com/p/login/fZecQT8sTgLH6s08ww'
+                    ),
+                    '_blank'
+                  )}
+                >
+                  Manage subscription
+                </p>
+              </div>
+            </div>
+            <Image
+              src="/assets/logos/stripe-badge.svg"
+              width="100%"
+              height="40"
+              alt="Powered by Stripe"
+            />
+          </div>
+        </Section>
+        <Section id="faqs">
+          <div className="grid gap-12">
+            <div className="grid gap-6 text-center">
+              <Pill label="FAQs" />
+              <h2 className="text-4xl font-accent">Commonly asked questions</h2>
+            </div>
+            <div className="grid gap-4 md:w-3/4 m-auto">
+              <Accordion title="Is there a limit to how many requests I can have?">
+                <p>
+                  Once subscribed, you&apos;re able to add as many web
+                  development requests to your backlog as you&apos;d like, and
+                  they will be delivered one by one.
+                </p>
+              </Accordion>
+              <Accordion title="How fast will requests be completed?">
+                <p>
+                  For minor requests such as bug fixes and CSS tweaks, they will
+                  usually be completed in a day or two. More complex requests
+                  may take longer. We provide an estimated timescale and start
+                  date to each request.
+                </p>
+              </Accordion>
+              <Accordion title="Who are the developers?">
+                <p>
+                  D3J Digital is a one-man agency, so you&apos;ll work with me,
+                  Dom, directly. Occasionally, we may use our trusted partners
+                  to complete certain tasks, such as design and marketing.
+                </p>
+              </Accordion>
+              <Accordion title="How do I request jobs?">
+                <p>
+                  D3J Digital offers lots of flexibility in how you request jobs
+                  using Trello. Some common ways clients request jobs is
+                  directly via Trello, sharing Google docs, sharing an image, or
+                  recording a Loom video.
+                </p>
+              </Accordion>
+              <Accordion title="Are there any refunds if I don't like the service?">
+                <p>
+                  Due to the high quality nature of the work, there will be no
+                  refunds issued.
+                </p>
+              </Accordion>
+              <Accordion title="How are subscriptions handled?">
+                <p>
+                  Subscriptions are handled by our secure payment gateway,
+                  Stripe.
+                </p>
+              </Accordion>
+            </div>
+          </div>
+        </Section>
+        <footer className="bg-white border-t border-black">
+          <div className="flex items-center justify-between gap-4 container">
+            <Image
+              src="/assets/logos/logo-black.svg"
+              width="130"
+              height="100"
+              alt="D3J Digital"
+            />
+            <p>&copy; D3J Digital Limited {new Date().getFullYear()}</p>
+          </div>
+        </footer>
       </main>
-      <footer className="flex flex-col gap-2 py-16 px-8 bg-black text-white text-center">
-        <Image
-          src="/assets/logos/logo-white.svg"
-          width="140"
-          height="115"
-          alt="D3J Digital Limited"
-        />
-        <p>Company Number 14159497 | VAT Reg Number 423631324</p>
-        <p>
-          &copy; D3J Digital Limited {new Date().getFullYear()}. All Rights
-          Reserved.
-        </p>
-      </footer>
-    </div>
+    </>
   );
 };
 

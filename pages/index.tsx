@@ -401,7 +401,7 @@ const Home: NextPage = () => {
                 subtitle="Pause or cancel anytime"
                 price="1,500"
                 onClick={() => (
-                  window.open('https://buy.stripe.com/5kAg1ObIY2Jy2Zi4gn'),
+                  window.open('https://buy.stripe.com/5kA9COduRd1f8GA144'),
                   '_blank'
                 )}
               />
@@ -410,7 +410,7 @@ const Home: NextPage = () => {
                 subtitle="£4,000 + VAT paid quarterly"
                 price="1,333"
                 onClick={() => (
-                  window.open('https://buy.stripe.com/5kAg1O7sI97W2Zi9AI'),
+                  window.open('https://buy.stripe.com/8wMaGS4Yle5j2icaEF'),
                   '_blank'
                 )}
               />
@@ -419,7 +419,7 @@ const Home: NextPage = () => {
                 subtitle="£15,000 + VAT paid annually"
                 price="1,250"
                 onClick={() => (
-                  window.open('https://buy.stripe.com/fZe02Q3cs0BqczS7sB'),
+                  window.open('https://buy.stripe.com/8wM9CObmJ9P3cWQ28a'),
                   '_blank'
                 )}
               />
@@ -444,7 +444,7 @@ const Home: NextPage = () => {
                   className="font-bold cursor-pointer"
                   onClick={() => (
                     window.open(
-                      'https://billing.stripe.com/p/login/fZecQT8sTgLH6s08ww'
+                      'https://billing.stripe.com/p/login/00gcOUekh0hFcrC9AA'
                     ),
                     '_blank'
                   )}
